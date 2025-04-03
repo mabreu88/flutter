@@ -45,7 +45,6 @@ class _DicePageState extends State<DicePage> {
               onPressed: () {
                 setState(() {
                   ballNumber = Random().nextInt(14) + 1;
-                  print(ballNumber);
                 });
               },
               child: Image.asset('images/ball$ballNumber.png'),
