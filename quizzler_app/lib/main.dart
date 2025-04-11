@@ -30,7 +30,10 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List scoreKeaper = [];
+  List<Icon> scoreKeaper = [
+    Icon(Icons.check, color: Colors.green),
+    Icon(Icons.close, color: Colors.red),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +65,10 @@ class _QuizPageState extends State<QuizPage> {
               ),
               child: Text('True', style: TextStyle(fontSize: 20.0)),
               onPressed: () {
-                // The user picked true.
+                setState(() {
+                  // The user picked true.
+                  scoreKeaper.add(Icon(Icons.check, color: Colors.green));
+                });
               },
             ),
           ),
@@ -78,17 +84,16 @@ class _QuizPageState extends State<QuizPage> {
               ),
               child: Text('False', style: TextStyle(fontSize: 20.0)),
               onPressed: () {
+                setState(() {
+                  // The user picked false.
+                  scoreKeaper.add(Icon(Icons.close, color: Colors.red));
+                });
                 // The user picked false.
               },
             ),
           ),
         ),
-        Row(
-          children: <Widget>[
-            Icon(Icons.check, color: Colors.green),
-            Icon(Icons.close, color: Colors.red),
-          ],
-        ),
+        Row(children: scoreKeaper),
       ],
     );
   }
