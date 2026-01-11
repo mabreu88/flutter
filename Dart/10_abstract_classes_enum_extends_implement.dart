@@ -114,7 +114,7 @@ class NuclearPlant extends EnergyPlant {
 // =============================================================
 // class GeotermicPlant implements EnergyPlant
 // - GeotermicPlant SE COMPORTA COMO EnergyPlant (cumple el contrato)
-// - NO hereda implementación (debe implementar TODO desde cero)
+// - NO hereda implementación (debe implementar T ODO desde cero)
 // - Puede implementar MÚLTIPLES interfaces
 //
 // DIFERENCIA CON EXTENDS:
